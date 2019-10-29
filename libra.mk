@@ -47,10 +47,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/synaptics_dsx.kl:system/vendor/usr/keylayout/synaptics_dsx.kl \
     $(DEVICE_PATH)/keylayout/synaptics_dsx_edge.kl:system/vendor/usr/keylayout/synaptics_dsx_edge.kl
 
-# EdgeGesture
-PRODUCT_PACKAGES += \
-    EdgeGesture
-
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.libra
