@@ -116,9 +116,12 @@ on boot
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
-
+    stop boot_lc
+    stop boot_lc_crash
+    stop boot_lc_kernel
     # Set BFQ I/O scheduler
     setprop sys.io.scheduler "bfq"
+    
 
 #start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
@@ -197,4 +200,24 @@ service fidodaemon /system/vendor/bin/fidodaemon
     class late_start
     user system
     group system
+    
+service boot_lc /system/bin/logcat -b all -D -f /cache/boot_lc_full.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
 
+service boot_lc_crash /system/bin/logcat -b crash -D -f /cache/boot_lc_crash.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service boot_lc_kernel /system/bin/logcat -b kernel -D -f /cache/boot_lc_kernel.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot    
