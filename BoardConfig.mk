@@ -19,7 +19,7 @@ TARGET_INIT_VENDOR_LIB := libinit_libra
 TARGET_RECOVERY_DEVICE_MODULES := libinit_libra
 
 # Kernel
-TARGET_KERNEL_CONFIG := libra_user_defconfig
+TARGET_KERNEL_CONFIG := libra_defconfig
 
 # Partition
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2013265920 #1920M
