@@ -12,6 +12,9 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/libra/libra.mk)
 
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/xiaomi/libra/apns-full-conf.xml:system/etc/apns-conf.xml
+
 # PE stuff
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
