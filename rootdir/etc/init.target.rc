@@ -39,15 +39,6 @@ on fs
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
 
     mount_all /vendor/etc/fstab.qcom
-    
-    # debug boot process
-    rm /cache/boot_lc_full.txt
-    rm /cache/boot_lc_crash.txt
-    rm /cache/boot_lc_kernel.txt
-    start boot_lc
-    start boot_lc_kernel
-    start boot_lc_crash
-    
 
     mkdir /persist/data 0700 system system
     mkdir /persist/wlan_bt 0700 system system
