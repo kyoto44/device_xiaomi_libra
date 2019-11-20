@@ -55,6 +55,10 @@ on post-fs
 
 on post-fs-data
 
+    # Clear existing log and start the service
+    rm /cache/boot_log.txt
+    start logger
+
     mkdir /data/tombstones/modem 0771 system system
     mkdir /data/tombstones/lpass 0771 system system
     mkdir /data/tombstones/wcnss 0771 system system
@@ -102,6 +106,9 @@ on boot
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
+
+    # Stop the logger service
+    stop logger
 
     # Set BFQ I/O scheduler
     setprop sys.io.scheduler "bfq"
@@ -184,3 +191,9 @@ service fidodaemon /system/vendor/bin/fidodaemon
     user system
     group system
 
+service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
