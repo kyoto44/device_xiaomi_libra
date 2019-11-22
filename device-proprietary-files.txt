@@ -249,9 +249,9 @@ vendor/lib/libmmcamera_ov5670_sunny.so
 vendor/lib/libmmcamera_s5k3m2xm.so
 vendor/lib/libmmcamera_s5k3m2xm_ofilm.so
 
-# Graphics - kanged from bullhead OPM7.181105.004
-vendor/lib/hw/vulkan.msm8992.so|8bd98116b5a586839aad4c93468fc04f044d4ef4
-vendor/lib64/hw/vulkan.msm8992.so|123f72ad06ab296028dc5d14884453630676027f
+# Graphics - from LA.UM.8.6.r1-01900-89xx.0
+vendor/lib/hw/vulkan.msm8992.so
+vendor/lib64/hw/vulkan.msm8992.so
 
 # Fingerprint
 vendor/lib64/libcom_fingerprints_service.so|84184194dc22c7f82892862f142977bc2c81d6eb
