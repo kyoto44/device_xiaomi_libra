@@ -21,8 +21,10 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+BUILD_FINGERPRINT := "Xiaomi/libra/libra:7.0/NRD90M/V9.5.2.0.NXKCNFA:user/release-keys"
 
-export export
-HAVOC_BUILD_TYPE=Official
+# Havoc
+export export HAVOC_BUILD_TYPE=Official
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.havoc.maintainer=kyoto44
