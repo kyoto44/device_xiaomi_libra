@@ -19,5 +19,10 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi-4c
 PRODUCT_MANUFACTURER := Xiaomi
 
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+
+export export
+HAVOC_BUILD_TYPE=Official
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.havoc.maintainer=kyoto44
