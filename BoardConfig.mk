@@ -25,8 +25,8 @@ TARGET_KERNEL_CONFIG := libra_defconfig
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2013265920 #1920M
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 27980184576 #26G
 
-# Gestures
-TARGET_GESTURES_NODE := "/proc/touchpanel/gesture_enable"
+# D2TW
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchscreen/double_tap_enable"
 
 # Assertions
 TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
