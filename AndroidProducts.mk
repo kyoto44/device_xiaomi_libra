@@ -14,4 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_libra.mk
+    $(LOCAL_DIR)/derp_libra.mk
+
+COMMON_LUNCH_CHOICES := \
+	derp_libra-userdebug
