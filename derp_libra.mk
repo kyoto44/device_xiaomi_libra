@@ -29,3 +29,7 @@ TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
 DERP_BUILDTYPE := Official
 CURRENT_BUILD_TYPE := nogapps
+
+# Device maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.derp.maintainer=Dmitry Gomzyakov
