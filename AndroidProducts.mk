@@ -15,3 +15,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/havoc_libra.mk
+
+COMMON_LUNCH_CHOICES += \
+    havoc_libra-userdebug    
